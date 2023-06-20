@@ -162,7 +162,54 @@ console.log('hello world!')
 // console.log(cenerentola);
 
 // alert e prompt----------------------------------------------------------------------------------
-alert('ciao a tutti');
+// alert('ciao a tutti');
 
-const elsa = prompt('come ti chiami?');
-console.log(elsa);
+// const elsa = prompt('come ti chiami?');
+// console.log(elsa);
+
+// if else control flow----------------------------------------------------------------------------
+// const mulan = prompt('dimmi un numero');
+
+// if ((mulan % 2) === 0) {
+//     alert('hai inserito un numero pari');
+// } else {
+//     alert('hai inserito un numero dispari');
+// }
+
+// console.log('fine del programma');
+
+// const jasmine = prompt('dimmi un numero');
+
+// const isJasmineDivisibleBy3 = jasmine % 3 === 0;
+// const isJasmineDivisibleBy5 = jasmine % 5 === 0;
+
+// if (isJasmineDivisibleBy3 && isJasmineDivisibleBy5) {
+//     alert('FIZZBUZZ');
+// } else if (isJasmineDivisibleBy3) {
+//     alert('FIZZ');
+// } else if (isJasmineDivisibleBy5) {
+//     alert('BUZZ');
+// } else {
+//     alert(jasmine);
+// }
+
+// switch control frame-------------------------------------------------------------------------
+const rapunzel = prompt('inserisci FIZZ, BUZZ o FIZZBUZZ');
+
+switch (rapunzel) {
+    case 'FIZZ':
+        alert('vuoi un numero divisibile per 3');
+        break;
+    
+    case 'BUZZ':
+        alert('vuoi un numero divisibile per 5');
+        break;
+
+    case 'FIZZBUZZ':
+        alert('vuoi un numero divisibile per 3 e per 5');
+        break;
+
+    default:
+        alert('hai sbagliato a inserire la parola');
+        break;
+}
