@@ -23,7 +23,7 @@ console.log('hello world!')
 
 // console.log(pippo);
 
-// variabili con const-----------------------------------------------------------------
+// variabili con const----------------------------------------------------------------- 
 // const pluto = 12;
 
 // pluto = 23;
