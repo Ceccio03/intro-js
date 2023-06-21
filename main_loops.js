@@ -117,11 +117,15 @@ console.log('looooooops');
 //     }
 // }
 
-// ESERCIZIO 3
+// ESERCIZIO 3 EASY
+let chessboard = '';
+
 for (let i = 0; i < 8; i++) {
-    for (let j = 0; j< 10; j++) {
-        
-        
+    if (i % 2 === 0) {
+        chessboard += ' # # # #\n';
+    } else {
+        chessboard += '# # # # \n';
     }
-    
 }
+
+console.log(chessboard);
