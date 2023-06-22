@@ -152,8 +152,14 @@ console.log('functions');
 
 // 1) Definire una funzione 'pow' che non faccia uso dell'operatore '**' ne della libreria Math
 function pow(base, exponent) {
-    
+    let pippo = base;
+    for (let i = 0; i < exponent; i++) {
+        base *= pippo;
+        
+    }  
+    return base; 
 }
+console.log(pow(5, 4));
 
 // 2) Definire una funzione 'correctCase' che prende in input una stringa e la restituisce trasformando la prima lettera in maiuscolo
 // 'la casa blu' => 'La casa blu'
@@ -193,5 +199,3 @@ function ellipse(params) {
 function reverseString(params) {
     
 }
-
-// 8) Definire una funzione 
