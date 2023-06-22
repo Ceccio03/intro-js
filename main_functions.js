@@ -162,9 +162,12 @@ console.log(pow(5, 4));
 
 // 2) Definire una funzione 'correctCase' che prende in input una stringa e la restituisce trasformando la prima lettera in maiuscolo
 // 'la casa blu' => 'La casa blu'
-function correctCase(params) {
-    
+function correctCase(string) {
+    let maiuscolo = string[0];
+    string[0].replace(string[0], newValue);
+    console.log(string.length[0]);
 }
+console.log(correctCase('la casa blu'));
 
 // 3) Definire una funzione 'min' che dati due numeri restituisca il minore
 function min(params) {
