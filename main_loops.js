@@ -131,7 +131,7 @@ console.log('looooooops');
 // console.log(chessboard);
 
 // ESERCIZIO 3 HARD
-const size = prompt('Inserire numero');
+const size = 3;
 
 let chessboard = '';
 
@@ -139,15 +139,15 @@ for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
         if (i % 2 === 0) {
             if (j  % 2 === 0) {
-                chessboard += ' ';
+                chessboard += '□';
             } else {
-                chessboard += '♡';
+                chessboard += '■';
             }
         } else {
             if (j % 2 === 0) {
-                chessboard += '♡';
+                chessboard += '■';
             } else {
-                chessboard += ' ';
+                chessboard += '□';
             }
         }
     }
