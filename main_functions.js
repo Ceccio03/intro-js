@@ -143,8 +143,32 @@ console.log('functions');
 // console.log(pow(5, 3));
 // console.log(pow(5));
 
-const startingString = '25';
-const startingNumber = parseInt(startingString);
+// const startingString = '11';
+// const startingNumber = parseInt(startingString, 16);
 
-console.log(startingString, typeof startingString);
-console.log(startingNumber, typeof startingNumber);
+// console.log(startingString, typeof startingString);
+// console.log(startingNumber, typeof startingNumber);
+
+// 1) Definire una funzione 'pow' che non faccia uso dell'operatore '**' ne della libreria Math
+function pow(base, exponent) {
+    
+}
+
+// 2) Definire una funzione 'correctCase' che prende in input una stringa e la restituisce trasformando la prima lettera in maiuscolo
+// 'la casa blu' => 'La casa blu'
+function correctCase(params) {
+    
+}
+
+// 3) Definire una funzione 'min' che dati due numeri restituisca il minore
+function min(params) {
+    
+}
+
+// 4) Definire una funzione 'clamp' che prende come parametri tre numeri: valore, massimo e minimo
+// Se valore è minore di minimo, restituisce minimo
+// Se valore è maggiore di massimo, restituisce massimo
+// Altrimenti restituisce valore
+function clamp(params) {
+    
+}
