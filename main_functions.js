@@ -153,9 +153,8 @@ console.log('functions');
 // 1) Definire una funzione 'pow' che non faccia uso dell'operatore '**' ne della libreria Math
 function pow(base, exponent) {
     let pippo = base;
-    for (let i = 0; i < exponent; i++) {
+    for (let i = 1; i < exponent; i++) {
         base *= pippo;
-        
     }  
     return base; 
 }
