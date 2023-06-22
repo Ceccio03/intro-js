@@ -149,6 +149,7 @@ console.log('functions');
 // console.log(startingString, typeof startingString);
 // console.log(startingNumber, typeof startingNumber);
 
+
 // 1) Definire una funzione 'pow' che non faccia uso dell'operatore '**' ne della libreria Math
 function pow(base, exponent) {
     
@@ -169,6 +170,28 @@ function min(params) {
 // Se valore è minore di minimo, restituisce minimo
 // Se valore è maggiore di massimo, restituisce massimo
 // Altrimenti restituisce valore
-function clamp(params) {
+function clamp(valore, massimo, minimo) {
     
 }
+
+// 5) Definire una funzione chessboard che prende come parametro 'size' e stampa la scacchiera
+function chessboard(params) {
+    
+}
+
+// 6) Definire una funzione 'ellipse' che prende come parametro una stringa
+// Se la stringa è minore di 20 caratteri la ritorna non modificata
+// Altrimenti la taglia a 20 caratteri e aggiunge 3 puntini
+// 'ciao mamma!' => 'ciao mamma!'
+// 'nel mezzo del cammin di nostra vita' => 'nel mezzo del cammin...'
+function ellipse(params) {
+    
+}
+
+// 7) Definire una funzione reverseString che data una stringa la restituisca al contrario
+// 'casa rosa' => 'asor asac'
+function reverseString(params) {
+    
+}
+
+// 8) Definire una funzione 
