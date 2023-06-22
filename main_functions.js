@@ -163,38 +163,70 @@ console.log(pow(5, 4));
 // 2) Definire una funzione 'correctCase' che prende in input una stringa e la restituisce trasformando la prima lettera in maiuscolo
 // 'la casa blu' => 'La casa blu'
 function correctCase(string) {
-    let maiuscolo = string[0];
-    string[0].replace(string[0], newValue);
-    console.log(string.length[0]);
+    if (string.length > 0) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    } else {
+        return string;
+    }
 }
 console.log(correctCase('la casa blu'));
 
 // 3) Definire una funzione 'min' che dati due numeri restituisca il minore
-function min(params) {
-    
+function min(num1, num2) {
+    if (num1 < num2) {
+        return num1;
+    } else {
+        return num2;
+    }
 }
+console.log(min(7, 9));
 
 // 4) Definire una funzione 'clamp' che prende come parametri tre numeri: valore, massimo e minimo
 // Se valore è minore di minimo, restituisce minimo
 // Se valore è maggiore di massimo, restituisce massimo
 // Altrimenti restituisce valore
 function clamp(valore, massimo, minimo) {
-    
+    if (valore < minimo) {
+        return minimo;
+    } else if (valore > massimo) {
+        return massimo;
+    } else {
+        return valore;
+    }
 }
+console.log(clamp(7, 9, 4));
 
 // 5) Definire una funzione chessboard che prende come parametro 'size' e stampa la scacchiera
-function chessboard(params) {
-    
+function chessboard(size) {
+    let scacchiera = '';
+
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if ((i + j) % 2 === 0) {
+                scacchiera += '□';
+            } else {
+                scacchiera += '■';
+            }
+        }
+        scacchiera += '\n';
+    }
+    console.log(scacchiera);
 }
+console.log(chessboard(7));
 
 // 6) Definire una funzione 'ellipse' che prende come parametro una stringa
 // Se la stringa è minore di 20 caratteri la ritorna non modificata
 // Altrimenti la taglia a 20 caratteri e aggiunge 3 puntini
 // 'ciao mamma!' => 'ciao mamma!'
 // 'nel mezzo del cammin di nostra vita' => 'nel mezzo del cammin...'
-function ellipse(params) {
-    
+function ellipse(string) {
+    if (string.length <= 20) {
+        return string;
+    } else {
+        return string.slice(0, 20) + '...';
+    }
 }
+console.log(ellipse('nel mezzo del cammin di nostra vita'));
 
 // 7) Definire una funzione reverseString che data una stringa la restituisca al contrario
 // 'casa rosa' => 'asor asac'
