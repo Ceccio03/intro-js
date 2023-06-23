@@ -114,3 +114,18 @@ function removeEven(selectedArray) {
     }
     return newArray;
 }
+console.log('remove even', removeEven(paperoga));
+
+function removeNegative(selectedArray) {
+    const newArray = [];
+
+    for (let i = 0; i < selectedArray.length; i++) {
+        const element = selectedArray[i];
+        
+        if (element >= 0) {
+            newArray.push(element);
+        }
+    }
+    return newArray;
+}
+console.log('remove negative', removeNegative(paperoga));
