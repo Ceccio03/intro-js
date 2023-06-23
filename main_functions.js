@@ -164,7 +164,7 @@ console.log(pow(5, 4));
 // 'la casa blu' => 'La casa blu'
 function correctCase(string) {
     if (string.length > 0) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
+        return string[0].toUpperCase() + string.slice(1);
     } else {
         return string;
     }
@@ -236,6 +236,7 @@ console.log(ellipse('nel mezzo del cammin di nostra vita'));
 
 // 7) Definire una funzione reverseString che data una stringa la restituisca al contrario
 // 'casa rosa' => 'asor asac'
-function reverseString(params) {
+function reverseString(string) {
     
 }
+console.log(reverseString('casa rosa'));
