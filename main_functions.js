@@ -238,7 +238,7 @@ console.log(ellipse('nel mezzo del cammin di nostra vita'));
 // 7) Definire una funzione reverseString che data una stringa la restituisca al contrario
 // 'casa rosa' => 'asor asac'
 function reverseString(string) {
-    for (let i = string.length - 1 ; i < array.length; i++) {
+    for (let i = string.length - 1; i < array.length; i++) {
         const element = array[i];
         
     }
