@@ -50,51 +50,67 @@ const pippo = ['pane', 'pasta', 'latte', 'caffè'];
 
 // TRASFORMAZION DI ARRAY-------------------------------------------
 // MAPPING
-const paperino = [2, 5, -4, 2000, 7, 34];
+// const paperino = [2, 5, -4, 2000, 7, 34];
 
-function multiplyArrayBy2(selectedArray) {
+// function multiplyArrayBy2(selectedArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
+//         const newElement = element * 2;
+
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+// console.log('multiply by 2', multiplyArrayBy2(paperino));
+
+// function divideArrayBy2ifEven(selectedArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
+//         let newElement;
+
+//         if (element % 2 === 0) {
+//             newElement = element / 2;
+//         } else {
+//             newElement = element;
+//         }
+
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+// console.log('divide by 2 if even', divideArrayBy2ifEven(paperino));
+
+// const paperone = ['qui', 'quo', 'qua'];
+
+// function upperCaseAll(selectedArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
+//         const newElement = element.toUpperCase();
+
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+// console.log(upperCaseAll(paperone));
+
+// FILTERING
+const paperoga = [3, 5, 6, 9, 8, 111, -3, -8, 0];
+
+function removeEven(selectedArray) {
     const newArray = [];
 
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
-        const newElement = element * 2;
-
-        newArray.push(newElement);
-    }
-    return newArray;
-}
-console.log('multiply by 2', multiplyArrayBy2(paperino));
-
-function divideArrayBy2ifEven(selectedArray) {
-    const newArray = [];
-
-    for (let i = 0; i < selectedArray.length; i++) {
-        const element = selectedArray[i];
-        let newElement;
-
-        if (element % 2 === 0) {
-            newElement = element / 2;
-        } else {
-            newElement = element;
+        
+        if (element % 2 !== 0) {
+            newArray.push(element);
         }
-
-        newArray.push(newElement);
     }
     return newArray;
 }
-console.log('divide by 2 if even', divideArrayBy2ifEven(paperino));
-
-const paperone = ['qui', 'quo', 'qua'];
-
-function upperCaseAll(selectedArray) {
-    const newArray = [];
-
-    for (let i = 0; i < selectedArray.length; i++) {
-        const element = selectedArray[i];
-        const newElement = element.toUpperCase();
-
-        newArray.push(newElement);
-    }
-    return newArray;
-}
-console.log(upperCaseAll(paperone));
