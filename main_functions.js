@@ -178,8 +178,14 @@ function min(num1, num2) {
     } else {
         return num2;
     }
+
+    // operatore ternario
+    // const minimum = num1 > num2 ? num2 : num1;
+    // return minimum;
 }
 console.log(min(7, 9));
+
+
 
 // 4) Definire una funzione 'clamp' che prende come parametri tre numeri: valore, massimo e minimo
 // Se valore è minore di minimo, restituisce minimo
@@ -210,7 +216,7 @@ function chessboard(size) {
         }
         scacchiera += '\n';
     }
-    console.log(scacchiera);
+    return scacchiera;
 }
 console.log(chessboard(7));
 
