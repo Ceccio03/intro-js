@@ -152,11 +152,12 @@ console.log('functions');
 
 // 1) Definire una funzione 'pow' che non faccia uso dell'operatore '**' ne della libreria Math
 function pow(base, exponent) {
-    let pippo = base;
+    let result = base;
+
     for (let i = 1; i < exponent; i++) {
-        base *= pippo;
+        result *= base;
     }  
-    return base; 
+    return result; 
 }
 console.log(pow(5, 4));
 
@@ -237,6 +238,9 @@ console.log(ellipse('nel mezzo del cammin di nostra vita'));
 // 7) Definire una funzione reverseString che data una stringa la restituisca al contrario
 // 'casa rosa' => 'asor asac'
 function reverseString(string) {
-    
+    for (let i = string.length - 1 ; i < array.length; i++) {
+        const element = array[i];
+        
+    }
 }
 console.log(reverseString('casa rosa'));
