@@ -100,32 +100,68 @@ const pippo = ['pane', 'pasta', 'latte', 'caffè'];
 // console.log(upperCaseAll(paperone));
 
 // FILTERING
-const paperoga = [3, 5, 6, 9, 8, 111, -3, -8, 0];
+// const paperoga = [3, 5, 6, 9, 8, 111, -3, -8, 0];
 
-function removeEven(selectedArray) {
-    const newArray = [];
+// function removeEven(selectedArray) {
+//     const newArray = [];
 
-    for (let i = 0; i < selectedArray.length; i++) {
-        const element = selectedArray[i];
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
         
-        if (element % 2 !== 0) {
-            newArray.push(element);
-        }
-    }
-    return newArray;
-}
-console.log('remove even', removeEven(paperoga));
+//         if (element % 2 !== 0) {
+//             newArray.push(element);
+//         }
+//     }
+//     return newArray;
+// }
+// console.log('remove even', removeEven(paperoga));
 
-function removeNegative(selectedArray) {
-    const newArray = [];
+// function removeNegative(selectedArray) {
+//     const newArray = [];
 
-    for (let i = 0; i < selectedArray.length; i++) {
-        const element = selectedArray[i];
+//     for (let i = 0; i < selectedArray.length; i++) {
+//         const element = selectedArray[i];
         
-        if (element >= 0) {
-            newArray.push(element);
-        }
-    }
-    return newArray;
-}
-console.log('remove negative', removeNegative(paperoga));
+//         if (element >= 0) {
+//             newArray.push(element);
+//         }
+//     }
+//     return newArray;
+// }
+// console.log('remove negative', removeNegative(paperoga));
+
+// FUNCTION COMPOSITION
+// const qui = [3, 5, 6, 9, 8, 111, -3, -8, 0, 20, -10000];
+
+// function removeNegativeAndMultiplyBy2(selectedArray) {
+//     // const arrayWithoutNegative = removeNegative(selectedArray);
+//     // const arrayMultiplied = multiplyArrayBy2(arrayWithoutNegative);
+
+//     // return arrayMultiplied;
+//     return multiplyArrayBy2(removeNegative(selectedArray));
+// }
+// console.log(removeNegativeAndMultiplyBy2(qui));
+
+// ESERCIZI-------------------------------------------------------------------------
+const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+// 1) Mapping function che prende in input un array di numeri e restituisce un array con tutti i numeri diminuiti di uno
+
+// 2) Mapping function che prende in input un array di numeri e restituisce un array con il valore assoluto dei numeri
+
+// 3) Mapping function che prende in input un array di numeri e restituisce un array di stringhe con scritto 'PARI' se il numero corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+
+// 4) Mapping function che prende in input un array di stringhe e le restituisce tutte minuscole
+
+// 5) Mapping function che prende in input un array di stringhe e restituisce un array di numeri con le lunghezze delle stringhe
+
+// 6) Mapping function che prende in input un array di stringhe e restituisce le stringhe in formato camelCase
+
+// 7) Mapping function che prende in input un array di stringhe e restituisce solo quelle più lunghe di tre caratteri
+
+// 8) Mapping function che prende in input un array di stringhe e restituisce solo quelle che contengono la lettera 'p'
+
+// 9) Mapping function che prende in input un array di numeri e restituisce i positivi divisibili per 3
+
+// 10) fare una copia del sito AXIA FORMAZIONE
