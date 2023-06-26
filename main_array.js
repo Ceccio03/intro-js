@@ -224,9 +224,10 @@ function moreThan3(selectedArray) {
 
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
-        const newElement = element.length > 3;
-
-        newArray.push(newElement);
+        
+        if (element.length > 3) {
+            newArray.push(element);
+        }
     }
     return newArray;
 }
@@ -238,9 +239,10 @@ function pLetter(selectedArray) {
 
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
-        const newElement = element.includes('p');
-
-        newArray.push(newElement);
+        
+        if (element.includes('p') || element.includes('P')) {
+            newArray.push(element);
+        }
     }
     return newArray;
 }
@@ -252,9 +254,10 @@ function divisibleBy3(selectedArray) {
 
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
-        const newElement = element > 0 && element % 3 === 0;
-
-        newArray.push(newElement);
+        
+        if (element % 3 === 0) {
+            newArray.push(element);
+        }
     }
     return newArray;
 }
