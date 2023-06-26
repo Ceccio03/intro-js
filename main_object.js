@@ -31,9 +31,30 @@ const studente2 = {
     marks: [8, 9, 7, 8, 10],
     dog: {
         name: 'Nala',
-        breed: 'lupo cecoslovacco',
+        breed: 'lupo cecoslovacco', 
         yob: 2017
     }
 };
-
 console.log(studente2);
+
+function calculateAge(student) {
+    const actualYear = new Date().getFullYear();
+    const age = actualYear - student.yob;
+
+    return age;
+}
+console.log(calculateAge(studente2));
+
+const studente3 = {
+    name: 'Cesare',
+    yob: 2003,
+    isMarried: false,
+    address: 'Genova',
+    marks: [9, 9, 7, 8, 6],
+    dog: {
+        name: 'Luna',
+        breed: 'bull terrier', 
+        yob: 2016
+    }
+};
+console.log(calculateAge(studente3));
