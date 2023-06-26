@@ -180,13 +180,7 @@ function pariDispari(selectedArray) {
 
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
-        const newElement = element;
-
-        if (element % 2 === 0) {
-            return 'PARI';
-        } else {
-            return 'DISPARI';
-        }
+        const newElement = element % 2 === 0 ? 'PARI' : 'DISPARI';
 
         newArray.push(newElement);
     }
