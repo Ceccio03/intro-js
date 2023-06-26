@@ -304,3 +304,5 @@ function divisibleBy3(selectedArray) {
     return newArray;
 }
 console.log(divisibleBy3(numbersArray));
+
+console.log(stringsArray.indexOf('Osvaldo'));

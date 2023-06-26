@@ -58,3 +58,42 @@ const studente3 = {
     }
 };
 console.log(calculateAge(studente3));
+
+const studente4 = {
+    name: 'Stefano',
+    yob: 1998,
+    isMarried: false,
+    address: 'Genova',
+    marks: [9, 10, 6, 8, 6],
+    dog: null
+};
+console.log(calculateAge(studente4));
+
+function calculateDogAge(student) {
+    if (student.dog) {
+        const actualYear = new Date().getFullYear();
+        const dogAge = (actualYear - student.dog.yob) * 7;
+
+        return dogAge;
+    } else {
+        return -1;
+    }
+}
+console.log(calculateDogAge(studente2));
+console.log(calculateDogAge(studente3));
+console.log(calculateDogAge(studente4));
+
+function calculateMean(student) {
+    let sum = 0;
+
+    for (const mark of student.marks) {
+        sum += mark;
+    }
+
+    const mean = sum / student.marks.length;
+
+    return mean;
+}
+console.log(calculateMean(studente2));
+console.log(calculateMean(studente3));
+console.log(calculateMean(studente4));
