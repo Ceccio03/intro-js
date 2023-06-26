@@ -246,7 +246,19 @@ function toCamelCase(selectedString) {
     }
     return camelString;
 }
-console.log(toCamelCase(stringsArray));
+
+function toCamelCaseAll(selectedArray) {
+    const newArray = [];
+
+    for (let i = 0; i < selectedArray.length; i++) {
+        const element = selectedArray[i];
+        const newElement = toCamelCase(element);
+
+        newArray.push(newElement);
+    }
+    return newArray;
+}
+console.log(toCamelCaseAll(stringsArray));
 
 // 7) Mapping function che prende in input un array di stringhe e restituisce solo quelle più lunghe di tre caratteri
 function moreThan3(selectedArray) {
