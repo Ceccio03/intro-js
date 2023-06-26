@@ -255,7 +255,7 @@ function divisibleBy3(selectedArray) {
     for (let i = 0; i < selectedArray.length; i++) {
         const element = selectedArray[i];
         
-        if (element % 3 === 0) {
+        if (element > 0 && element % 3 === 0) {
             newArray.push(element);
         }
     }
