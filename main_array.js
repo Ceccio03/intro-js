@@ -217,6 +217,36 @@ function stringsLength(selectedArray) {
 console.log(stringsLength(stringsArray));
 
 // 6) Mapping function che prende in input un array di stringhe e restituisce le stringhe in formato camelCase
+function toFirstCase(selectedWord) {
+    const firstChar = selectedWord[0];
+    const firstCharUpper = firstChar.toUpperCase();
+    const restOfTheString = selectedWord.slice(1);
+
+    return firstCharUpper + restOfTheString;
+}
+
+function toCamelCase(selectedString) {
+    const lowerString = selectedString.toLowerCase();
+    const wordsArray = lowerString.split(' ');
+
+    if (wordsArray.length === 1) {
+        return lowerString;
+    }
+
+    let camelString = '';
+
+    for (let i = 0; i < wordsArray.length; i++) {
+        const element = wordsArray[i];
+        
+        if (i === 0) {
+            camelString += element;
+        } else {
+            camelString += toFirstCase(element);
+        }
+    }
+    return camelString
+}
+console.log(toCamelCase(stringsArray));
 
 // 7) Mapping function che prende in input un array di stringhe e restituisce solo quelle più lunghe di tre caratteri
 function moreThan3(selectedArray) {
