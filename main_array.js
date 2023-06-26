@@ -244,7 +244,7 @@ function toCamelCase(selectedString) {
             camelString += toFirstCase(element);
         }
     }
-    return camelString
+    return camelString;
 }
 console.log(toCamelCase(stringsArray));
 
