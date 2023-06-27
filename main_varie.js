@@ -96,15 +96,69 @@ function sumAllArray(arrayToSum) {
 }
 console.log(sumAllArray([2, 3, 4, 5]));
 
-function multiplyAllArray(arrayToSum) {
-    let accumulator = 0;
-    
-    for (let i = 0; i < arrayToSum.length; i++) {
-        const current = arrayToSum[i];
+function multiplyAllArray(arrayToMultiply) {
+    let accumulator = 1;
+
+    for (let i = 0; i < arrayToMultiply.length; i++) {
+        const current = arrayToMultiply[i];
+        
+        // put your code here
+        accumulator *= current;
+    }
+    return accumulator;
+}
+console.log(multiplyAllArray([2, 3, 4, 5]));
+
+function join(arrayToJoin) {
+    let accumulator = '';
+
+    for (let i = 0; i < arrayToJoin.length; i++) {
+        const current = arrayToJoin[i];
         
         // put your code here
         accumulator += current;
     }
     return accumulator;
 }
-console.log(sumAllArray([2, 3, 4, 5]));
+console.log(join(['qui', 'quo', 'qua']));
+
+function sumEvenAndOdd(arrayToReduce) {
+    let accumulator = {sumOfEven: 0, sumOfOdd: 0};
+
+    for (let i = 0; i < arrayToReduce.length; i++) {
+        const current = arrayToReduce[i];
+        
+        // put your code here
+        if (current % 2 === 0) {
+            accumulator.sumOfEven += current;
+        } else {
+            accumulator.sumOfOdd += current;
+        }
+    }
+    return accumulator;
+}
+console.log(sumEvenAndOdd([1, 2, 3, 4, 5, 6]));
+
+// RICORSIONE-----------------------------------------------------------
+// FATTORIALE(!)
+
+// 5! = 5 * 4 * 3 * 2 * 1 = 120!
+
+// DEFINIZIONE
+// 1) 1! = 1;
+// 2) n! = n * (n - 1)!
+
+// 5! = 5 * 4!
+//          4 * 3!
+//              3 * 2!
+//                  2 * 1!
+//                      1
+
+function fattoriale(n) {
+    // 1)
+    if (n === 1) {
+        return 1;
+    } else {
+        return n * fattoriale(n - 1);
+    }
+}
