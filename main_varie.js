@@ -154,13 +154,56 @@ console.log(sumEvenAndOdd([1, 2, 3, 4, 5, 6]));
 //                  2 * 1!
 //                      1
 
-function fattoriale(n) {
-    if (n === 1) {
-        // 1)
-        return 1;
+// function fattoriale(n) {
+//     if (n === 1) {
+//         // 1)
+//         return 1;
+//     } else {
+//         // 2)
+//         return n * fattoriale(n - 1);
+//     }
+// }
+// console.log(fattoriale(5));
+
+function min(v1, v2) {
+    let minimum;
+
+    if (v1 < v2) {
+        minimum = v1;
     } else {
-        // 2)
-        return n * fattoriale(n - 1);
+        minimum = v2;
+    }
+    return minimum;
+}
+console.log(min(3, 8) === 3);
+console.log(min(13, 8) === 8);
+
+function min2(...args) {
+    let accumulator = -Infinity;
+
+    for (let i = 0; i < args.length; i++) {
+        const current = args[i];
+        
+        if (i === 0) {
+            accumulator = current;
+        } else if (accumulator > current) {
+            accumulator = current;
+        }
+    }
+    return accumulator;
+}
+console.log(min2());
+console.log(min2(2));
+console.log(min2(3, 2, -5, 8));
+
+function isEven(n) {
+    if (n === 0) {
+        return true;
+    } else if (n === 1) {
+        return false;
+    } else {
+        return isEven(n - 2);
     }
 }
-console.log(fattoriale(5));
+console.log(isEven(3));
+console.log(isEven(6));
