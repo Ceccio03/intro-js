@@ -40,3 +40,44 @@ console.log('looooog');
 //     }
     
 // }
+
+// FUNZIONE PARAMETRI ARGS---------------------------------
+// function mean() {
+//     // console.log(arguments);
+
+//     // const sum = v1 +v2 + v3;
+//     // const mean = sum / 3;
+
+//     // return mean;
+
+//     let sum = 0;
+
+//     for (let i = 0; i < arguments.length; i++) {
+//         const value = arguments[i];
+        
+//         sum += value;
+//     }
+//     const mean = sum / arguments.length;
+
+//     return mean;
+// }
+// console.log(mean(3, 4, 5));
+
+// function sumAll(...args) {
+//     let sum = 0;
+
+//     for (let i = 0; i < args.length; i++) {
+//         const value = args[i];
+//         sum += value;
+//     }
+//     return sum;
+// }
+// console.log(sumAll(3, 4, 5));
+
+// function pippo(v1, v2, ...args) {
+//     console.log(arguments);
+//     console.log(v1);
+//     console.log(v2);
+//     console.log(args);
+// }
+// pippo(2, 4, 6, 8, 0);
