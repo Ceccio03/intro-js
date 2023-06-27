@@ -81,3 +81,30 @@ console.log('looooog');
 //     console.log(args);
 // }
 // pippo(2, 4, 6, 8, 0);
+
+// REDUCE---------------------------------------------------------------
+function sumAllArray(arrayToSum) {
+    let accumulator = 0;
+
+    for (let i = 0; i < arrayToSum.length; i++) {
+        const current = arrayToSum[i];
+        
+        // put your code here
+        accumulator += current;
+    }
+    return accumulator;
+}
+console.log(sumAllArray([2, 3, 4, 5]));
+
+function multiplyAllArray(arrayToSum) {
+    let accumulator = 0;
+    
+    for (let i = 0; i < arrayToSum.length; i++) {
+        const current = arrayToSum[i];
+        
+        // put your code here
+        accumulator += current;
+    }
+    return accumulator;
+}
+console.log(sumAllArray([2, 3, 4, 5]));
