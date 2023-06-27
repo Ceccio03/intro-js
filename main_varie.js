@@ -155,10 +155,12 @@ console.log(sumEvenAndOdd([1, 2, 3, 4, 5, 6]));
 //                      1
 
 function fattoriale(n) {
-    // 1)
     if (n === 1) {
+        // 1)
         return 1;
     } else {
+        // 2)
         return n * fattoriale(n - 1);
     }
 }
+console.log(fattoriale(5));
