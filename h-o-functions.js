@@ -75,3 +75,11 @@ function getStringLength(element) {
 }
 console.log(testArray2.map((element) => element.length));
 console.log(testArray2.map(getStringLength));
+
+function multiplyByIndex(element, i, originalArray) {
+    const newElement = element * i;
+
+    return newElement;
+}
+console.log(testArray.map(multiplyByIndex));
+console.log(testArray.map((e, i) => e * i));
