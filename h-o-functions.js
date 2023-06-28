@@ -118,4 +118,4 @@ function isPositive(element) {
         return false;
     }
 }
-console.log(removeNegative([0, 3, 5, -2, -5, 8]));
+console.log(filter([0, 3, 5, -2, -5, 8], isPositive));
