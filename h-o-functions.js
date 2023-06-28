@@ -131,3 +131,14 @@ function isEven(element) {
     }
 }
 console.log(testArray3.filter(isEven));
+console.log(testArray3.filter(element => element % 2 === 0));
+
+function isIndexEven(element, index, originalArray) {
+    if (index % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(testArray3.filter(isIndexEven));
+console.log(testArray3.filter((element, index) => index % 2 === 0));
