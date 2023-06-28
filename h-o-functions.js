@@ -28,17 +28,17 @@ console.log('order');
 // }
 // console.log(divideByTwoArray([3, 7, 0]));
 
-// function map(array, transFunc) {
-//     let tempArray = [];
+function map(array, transFunc) {
+    let tempArray = [];
 
-//     for (let i = 0; i < array.length; i++) {
-//         const element = array[i];
-//         const newElement = transFunc(element);
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = transFunc(element);
         
-//         tempArray.push(newElement);
-//     }
-//     return tempArray;
-// }
+        tempArray.push(newElement);
+    }
+    return tempArray;
+}
 
 // function addOne(element) {
 //     const newElement = element + 1;
@@ -98,18 +98,18 @@ console.log('order');
 // }
 // console.log(removeNegative([0, 3, 5, -2, -5, 8]));
 
-// function filter(array, filterFunc) {
-//     let tempArray = [];
+function filter(array, filterFunc) {
+    let tempArray = [];
 
-//     for (let i = 0; i < array.length; i++) {
-//         const element = array[i];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
         
-//         if (filterFunc(element)) {
-//             tempArray.push(element);
-//         }
-//     }
-//     return tempArray;
-// }
+        if (filterFunc(element)) {
+            tempArray.push(element);
+        }
+    }
+    return tempArray;
+}
 
 // function isPositive(element) {
 //     if (element >= 0) {
@@ -229,53 +229,116 @@ console.log('order');
 
 // FUNZIONI CHE RESTITUISCONO FUNZIONI
 
-function multiplyBy2(number) {
-    const result = number * 2;
+// function multiplyBy2(number) {
+//     const result = number * 2;
 
-    return result;
-}
+//     return result;
+// }
 
-function multiplyBy4(number) {
-    const result = number * 4;
+// function multiplyBy4(number) {
+//     const result = number * 4;
 
-    return result;
-}
-console.log(multiplyBy2(2));
-console.log(multiplyBy4(3));
+//     return result;
+// }
+// console.log(multiplyBy2(2));
+// console.log(multiplyBy4(3));
 
-function multiplyGenerator(multiplicator) {
-    const multiplyFunction = function (number) {
-        const result = number * multiplicator;
+// function multiplyGenerator(multiplicator) {
+//     const multiplyFunction = function (number) {
+//         const result = number * multiplicator;
 
-        return result;
-    }
-    return multiplyFunction;
-}
+//         return result;
+//     }
+//     return multiplyFunction;
+// }
 
-const multiplyBy5 = multiplyGenerator(5);
-console.log(multiplyBy5(3));
+// const multiplyBy5 = multiplyGenerator(5);
+// console.log(multiplyBy5(3));
 
-const multiplyBy10 = multiplyGenerator(10);
-console.log(multiplyBy10(3));
-console.log(multiplyGenerator(100)(3));
+// const multiplyBy10 = multiplyGenerator(10);
+// console.log(multiplyBy10(3));
+// console.log(multiplyGenerator(100)(3));
 
-function prefix(prefixStr) {
-    const prefixFunction = (str) => prefixStr + ' ' + str;
+// function prefix(prefixStr) {
+//     const prefixFunction = (str) => prefixStr + ' ' + str;
 
-    return prefixFunction;
-}
-const itaPrefix = prefix('+39');
-console.log(itaPrefix('3895825121'));
-const frPrefix = prefix('+33');
-console.log(frPrefix('3895825121'));
+//     return prefixFunction;
+// }
+// const itaPrefix = prefix('+39');
+// console.log(itaPrefix('3895825121'));
+// const frPrefix = prefix('+33');
+// console.log(frPrefix('3895825121'));
 
 // ESERCIZI
-// 1) Filter function che prende in input un array di numeri e restituisce un array con tutti i numeri diminuiti di uno
-// 2) Filter function che prende in input un array di numeri e restituisce un array con il valore assoluto dei numeri
-// 3) Filter function che prende in input un array di numeri e restituisce un array di stringhe con scritto 'PARI' se il numero corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
-// 4) Filter function che prende in input un array di stringhe e le restituisce tutte minuscole
-// 5) Filter function che prende in input un array di stringhe e restituisce un array di numeri con le lunghezze delle stringhe
-// 6) Filter function che prende in input un array di stringhe e restituisce le stringhe in formato camelCase
+const numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+// 1) Mapping function che prende in input un array di numeri e restituisce un array con tutti i numeri diminuiti di uno
+function removeOne(element) {
+    const newElement = element - 1;
+
+    return newElement;
+}
+console.log(numbersArray.map(removeOne));
+console.log(numbersArray.map(element => element - 1));
+
+// 2) Mapping function che prende in input un array di numeri e restituisce un array con il valore assoluto dei numeri
+function absolute(element) {
+    const newElement = Math.abs(element);
+
+    return newElement;
+}
+console.log(numbersArray.map(absolute));
+console.log(numbersArray.map(element => Math.abs(element)));
+
+// 3) Mapping function che prende in input un array di numeri e restituisce un array di stringhe con scritto 'PARI' se il numero corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+// 4) Mapping function che prende in input un array di stringhe e le restituisce tutte minuscole
+function allLowerCare(element) {
+    const newElement = element.toLowerCase();
+
+    return newElement;
+}
+console.log(stringsArray.map(allLowerCare));
+console.log(stringsArray.map(element => element.toLowerCase()));
+
+// 5) Mapping function che prende in input un array di stringhe e restituisce un array di numeri con le lunghezze delle stringhe
+function stringsLength(element) {
+    const newElement = element.length;
+
+    return newElement;
+}
+console.log(stringsArray.map(stringsLength));
+console.log(stringsArray.map(element => element.length));
+
 // 7) Filter function che prende in input un array di stringhe e restituisce solo quelle più lunghe di tre caratteri
+function moreThan3(element) {
+    if (element.length > 3) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(stringsArray.filter(moreThan3));
+console.log(stringsArray.filter(element => element.length > 3));
+
 // 8) Filter function che prende in input un array di stringhe e restituisce solo quelle che contengono la lettera 'p'
+function pLetter(element) {
+    if (element.includes('p') || element.includes('P')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(stringsArray.filter(pLetter));
+console.log(stringsArray.filter(element => element.includes('p') || element.includes('P')));
+
 // 9) Filter function che prende in input un array di numeri e restituisce i positivi divisibili per 3
+function divisibleBy3(element) {
+    if (element > 0 && element % 3 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(numbersArray.filter(divisibleBy3));
+console.log(numbersArray.filter(element => element > 0 && element % 3 === 0));
