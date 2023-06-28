@@ -244,5 +244,27 @@ console.log(multiplyBy2(2));
 console.log(multiplyBy4(3));
 
 function multiplyGenerator(multiplicator) {
-    
+    const multiplyFunction = function (number) {
+        const result = number * multiplicator;
+
+        return result;
+    }
+    return multiplyFunction;
 }
+
+const multiplyBy5 = multiplyGenerator(5);
+console.log(multiplyBy5(3));
+
+const multiplyBy10 = multiplyGenerator(10);
+console.log(multiplyBy10(3));
+console.log(multiplyGenerator(100)(3));
+
+function prefix(prefixStr) {
+    const prefixFunction = (str) => prefixStr + ' ' + str;
+
+    return prefixFunction;
+}
+const itaPrefix = prefix('+39');
+console.log(itaPrefix('3895825121'));
+const frPrefix = prefix('+33');
+console.log(frPrefix('3895825121'));
