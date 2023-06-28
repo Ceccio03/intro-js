@@ -154,3 +154,48 @@ function sumAll(array) {
     return accumulator;
 }
 console.log(sumAll([23, 4, 4, 6, 3]));
+
+function reduce(array, reduceFunc, startingValue) {
+    let accumulator = startingValue;
+
+    for (let i = 0; i < array.length; i++) {
+        const current = array[i];
+        
+        accumulator = reduceFunc(accumulator, current);
+    }
+    return accumulator;
+}
+
+function sum(accumulator, current) {
+    const newAccumulator = accumulator + current;
+
+    return newAccumulator;
+}
+console.log(reduce([23, 4, 4, 6, 3], sum, 0));
+
+
+const testArray4 = [4, 3, 2, 1];
+
+function multiply(acc, curr) {
+    // const newAcc = acc * curr;
+
+    // return newAcc;
+    return acc * curr;
+}
+console.log(testArray4.reduce(multiply, 1));
+console.log(testArray4.reduce((acc, curr) => acc * curr, 1));
+
+
+const multiplyLambda = (acc, curr) => {
+    const newAcc = acc * curr;
+
+    return newAcc;
+}
+
+const multiplyLambda2 = (acc, curr) => acc * curr;
+
+console.log(testArray4.reduce((acc, curr) => {
+    const newAcc = acc * curr;
+
+    return newAcc;
+}, 1));
