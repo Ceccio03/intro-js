@@ -153,3 +153,4 @@ function sumAll(array) {
     }
     return accumulator;
 }
+console.log(sumAll([23, 4, 4, 6, 3]));
