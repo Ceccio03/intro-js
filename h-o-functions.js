@@ -268,3 +268,14 @@ const itaPrefix = prefix('+39');
 console.log(itaPrefix('3895825121'));
 const frPrefix = prefix('+33');
 console.log(frPrefix('3895825121'));
+
+// ESERCIZI
+// 1) Filter function che prende in input un array di numeri e restituisce un array con tutti i numeri diminuiti di uno
+// 2) Filter function che prende in input un array di numeri e restituisce un array con il valore assoluto dei numeri
+// 3) Filter function che prende in input un array di numeri e restituisce un array di stringhe con scritto 'PARI' se il numero corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+// 4) Filter function che prende in input un array di stringhe e le restituisce tutte minuscole
+// 5) Filter function che prende in input un array di stringhe e restituisce un array di numeri con le lunghezze delle stringhe
+// 6) Filter function che prende in input un array di stringhe e restituisce le stringhe in formato camelCase
+// 7) Filter function che prende in input un array di stringhe e restituisce solo quelle più lunghe di tre caratteri
+// 8) Filter function che prende in input un array di stringhe e restituisce solo quelle che contengono la lettera 'p'
+// 9) Filter function che prende in input un array di numeri e restituisce i positivi divisibili per 3
