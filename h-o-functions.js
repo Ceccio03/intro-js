@@ -68,4 +68,10 @@ console.log(testArray.map((element) => element * 2));
 
 const testArray2 = ['CIAO', 'qui', 'sticazzi', 'il sole splende vincitore'];
 
+function getStringLength(element) {
+    const length = element.length;
+
+    return length;
+}
 console.log(testArray2.map((element) => element.length));
+console.log(testArray2.map(getStringLength));
