@@ -84,61 +84,72 @@ console.log('order');
 // console.log(testArray.map(multiplyByIndex));
 // console.log(testArray.map((e, i) => e * i));
 
-function removeNegative(array) {
-    let tempArray = [];
+// function removeNegative(array) {
+//     let tempArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+        
+//         if (element >= 0) {
+//             tempArray.push(element);
+//         }
+//     }
+//     return tempArray;
+// }
+// console.log(removeNegative([0, 3, 5, -2, -5, 8]));
+
+// function filter(array, filterFunc) {
+//     let tempArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+        
+//         if (filterFunc(element)) {
+//             tempArray.push(element);
+//         }
+//     }
+//     return tempArray;
+// }
+
+// function isPositive(element) {
+//     if (element >= 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(filter([0, 3, 5, -2, -5, 8], isPositive));
+
+
+// const testArray3 = [3, 5, 4, 8, 20, 21];
+
+// function isEven(element) {
+//     if (element % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(testArray3.filter(isEven));
+// console.log(testArray3.filter(element => element % 2 === 0));
+
+// function isIndexEven(element, index, originalArray) {
+//     if (index % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(testArray3.filter(isIndexEven));
+// console.log(testArray3.filter((element, index) => index % 2 === 0));
+
+function sumAll(array) {
+    let accumulator = 0;
 
     for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+        const current = array[i];
         
-        if (element >= 0) {
-            tempArray.push(element);
-        }
+        accumulator += current;
     }
-    return tempArray;
+    return accumulator;
 }
-console.log(removeNegative([0, 3, 5, -2, -5, 8]));
-
-function filter(array, filterFunc) {
-    let tempArray = [];
-
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
-        if (filterFunc(element)) {
-            tempArray.push(element);
-        }
-    }
-    return tempArray;
-}
-
-function isPositive(element) {
-    if (element >= 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log(filter([0, 3, 5, -2, -5, 8], isPositive));
-
-
-const testArray3 = [3, 5, 4, 8, 20, 21];
-
-function isEven(element) {
-    if (element % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log(testArray3.filter(isEven));
-console.log(testArray3.filter(element => element % 2 === 0));
-
-function isIndexEven(element, index, originalArray) {
-    if (index % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log(testArray3.filter(isIndexEven));
-console.log(testArray3.filter((element, index) => index % 2 === 0));
