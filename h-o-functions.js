@@ -45,4 +45,27 @@ function addOne(element) {
 
     return newElement;
 }
+
+function divideByTwo(element) {
+    const newElement = element / 2;
+
+    return newElement;
+}
 console.log(map([7, 10, 34], addOne));
+console.log(map([7, 10, 34], divideByTwo));
+
+
+const testArray = [12, 34, 5, 0, -23];
+
+function multiplyBy2(element) {
+    const newElement = element * 2;
+
+    return newElement;
+}
+console.log(testArray.map(multiplyBy2));
+console.log(testArray.map((element) => element * 2));
+
+
+const testArray2 = ['CIAO', 'qui', 'sticazzi', 'il sole splende vincitore'];
+
+console.log(testArray2.map((element) => element.length));
