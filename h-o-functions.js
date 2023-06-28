@@ -104,7 +104,7 @@ function filter(array, filterFunc) {
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
         
-        if (filterFunc(element) >= 0) {
+        if (filterFunc(element)) {
             tempArray.push(element);
         }
     }
