@@ -29,5 +29,20 @@ function divideByTwoArray(arrayOfNumbers) {
 console.log(divideByTwoArray([3, 7, 0]));
 
 function map(array, transFunc) {
-    
+    let tempArray = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = transFunc(element);
+        
+        tempArray.push(newElement);
+    }
+    return tempArray;
 }
+
+function addOne(element) {
+    const newElement = element + 1;
+
+    return newElement;
+}
+console.log(map([7, 10, 34], addOne));
