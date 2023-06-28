@@ -119,3 +119,15 @@ function isPositive(element) {
     }
 }
 console.log(filter([0, 3, 5, -2, -5, 8], isPositive));
+
+
+const testArray3 = [3, 5, 4, 8, 20, 21];
+
+function isEven(element) {
+    if (element % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(testArray3.filter(isEven));
