@@ -292,6 +292,16 @@ console.log(numbersArray.map(absolute));
 console.log(numbersArray.map(element => Math.abs(element)));
 
 // 3) Mapping function che prende in input un array di numeri e restituisce un array di stringhe con scritto 'PARI' se il numero corrispondente è pari o 'DISPARI' se il numero corrispondente è dispari
+function pariDispari(element) {
+    if (element % 2 === 0) {
+        return 'PARI';
+    } else {
+        return 'DISPARI';
+    }
+}
+console.log(numbersArray.map(pariDispari));
+console.log(numbersArray.map(element => element % 2 === 0 ? 'PARI' : 'DISPARI'));
+
 // 4) Mapping function che prende in input un array di stringhe e le restituisce tutte minuscole
 function allLowerCare(element) {
     const newElement = element.toLowerCase();
