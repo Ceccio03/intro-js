@@ -449,11 +449,41 @@ const student6 = {
     marks: [10, 10, 10, 10]
 }
 
-const students = [student1, student2, student3, student4, student5, student6];
+const student7 = {
+    name: 'stefania',
+    yob: 2000,
+    marks: [10, 10, 9, 10]
+}
+
+const students = [student1, student2, student3, student4, student5, student6, student7];
 
 function compareStudentsByNameAscending(s1, s2) {
     return s1.name.localeCompare(s2.name);
 }
-students.sort(compareStudentsByNameAscending);
+
+function compareStudentsByYOBDescending(s1, s2) {
+    return s2.yob - s1.yob;
+}
+
+function compareStudentsByNameAndYear(s1, s2) {
+    if (s1.name.localeCompare(s2.name) === 0) {
+        return s2.yob - s1.yob;
+    } else {
+        return s1.name.localeCompare(s2.name);
+    }
+}
+
+function calculateMean(arrayOfNumber) {
+    const sumOfArray = arrayOfNumber.reduce((a, c) => a + c);
+    const mean = sumOfArray / arrayOfNumber.length;
+
+    return mean;
+}
+
+function compareByStudentsMarksMeanDescending(s1, s2) {
+    return calculateMean(s2.marks) - calculateMean(s1.marks);
+}
+
+students.sort(compareByStudentsMarksMeanDescending);
 
 console.log(students);
