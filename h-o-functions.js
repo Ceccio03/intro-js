@@ -413,77 +413,116 @@ function reduce(array, reduceFunc, startingValue) {
 
 // console.log(stringsArray);
 
-const student1 = {
-    name: 'manuela',
-    yob: 1988,
-    marks: [10, 8, 7, 5]
-}
+// const student1 = {
+//     name: 'manuela',
+//     yob: 1988,
+//     marks: [10, 8, 7, 5]
+// }
 
-const student2 = {
-    name: 'damiano',
-    yob: 1993,
-    marks: [9, 8, 7, 10]
-}
+// const student2 = {
+//     name: 'damiano',
+//     yob: 1993,
+//     marks: [9, 8, 7, 10]
+// }
 
-const student3 = {
-    name: 'cesare',
-    yob: 2003,
-    marks: [7, 8, 7, 6]
-}
+// const student3 = {
+//     name: 'cesare',
+//     yob: 2003,
+//     marks: [7, 8, 7, 6]
+// }
 
-const student4 = {
-    name: 'isabella',
-    yob: 1996,
-    marks: [10, 8, 9, 9]
-}
+// const student4 = {
+//     name: 'isabella',
+//     yob: 1996,
+//     marks: [10, 8, 9, 9]
+// }
 
-const student5 = {
-    name: 'stefania',
-    yob: 1996,
-    marks: [9, 4, 7, 6]
-}
+// const student5 = {
+//     name: 'stefania',
+//     yob: 1996,
+//     marks: [9, 4, 7, 6]
+// }
 
-const student6 = {
-    name: 'ares',
-    yob: 1993,
-    marks: [10, 10, 10, 10]
-}
+// const student6 = {
+//     name: 'ares',
+//     yob: 1993,
+//     marks: [10, 10, 10, 10]
+// }
 
-const student7 = {
-    name: 'stefania',
-    yob: 2000,
-    marks: [10, 10, 9, 10]
-}
+// const student7 = {
+//     name: 'stefania',
+//     yob: 2000,
+//     marks: [10, 10, 9, 10]
+// }
 
-const students = [student1, student2, student3, student4, student5, student6, student7];
+// const student8 = {
+//     name: 'cesare',
+//     yob: 2003,
+//     marks: [9, 9, 9, 9]
+// }
 
-function compareStudentsByNameAscending(s1, s2) {
-    return s1.name.localeCompare(s2.name);
-}
+// const students = [student1, student2, student3, student4, student5, student6, student7, student8];
 
-function compareStudentsByYOBDescending(s1, s2) {
-    return s2.yob - s1.yob;
-}
+// function compareStudentsByNameAscending(s1, s2) {
+//     return s1.name.localeCompare(s2.name);
+// }
 
-function compareStudentsByNameAndYear(s1, s2) {
-    if (s1.name.localeCompare(s2.name) === 0) {
-        return s2.yob - s1.yob;
-    } else {
-        return s1.name.localeCompare(s2.name);
+// function compareStudentsByYOBDescending(s1, s2) {
+//     return s2.yob - s1.yob;
+// }
+
+// function compareStudentsByNameAndYear(s1, s2) {
+//     if (s1.name.localeCompare(s2.name) === 0) {
+//         return s2.yob - s1.yob;
+//     } else {
+//         return s1.name.localeCompare(s2.name);
+//     }
+// }
+
+// function calculateMean(arrayOfNumber) {
+//     const sumOfArray = arrayOfNumber.reduce((a, c) => a + c);
+//     const mean = sumOfArray / arrayOfNumber.length;
+
+//     return mean;
+// }
+
+// function compareByStudentsMarksMeanDescending(s1, s2) {
+//     return calculateMean(s2.marks) - calculateMean(s1.marks);
+// }
+
+// function compareStudentsByNameYearAndMean(s1, s2) {
+//     if (s1.name.localeCompare(s2.name) === 0) {
+//         if (s2.yob - s1.yob === 0) {
+//             return calculateMean(s2.marks) - calculateMean(s1.marks);
+//         } else {
+//             return s2.yob - s1.yob;
+//         }
+//     } else {
+//         return s1.name.localeCompare(s2.name);
+//     }
+// }
+
+// students.sort(compareStudentsByNameYearAndMean);
+
+// console.log(students);
+
+// FIND-------------------------------------------------------------------
+const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+
+function isGreaterThan3Chars(element) {
+    if (element.length > 3) {
+        return true;
     }
+    return false;
 }
+console.log(stringsArray.filter(isGreaterThan3Chars));
+console.log(stringsArray.find(isGreaterThan3Chars));
 
-function calculateMean(arrayOfNumber) {
-    const sumOfArray = arrayOfNumber.reduce((a, c) => a + c);
-    const mean = sumOfArray / arrayOfNumber.length;
-
-    return mean;
+function containsCASA(element) {
+    if (element.includes('CASA')) {
+        return true;
+    }
+    return false;
 }
-
-function compareByStudentsMarksMeanDescending(s1, s2) {
-    return calculateMean(s2.marks) - calculateMean(s1.marks);
-}
-
-students.sort(compareByStudentsMarksMeanDescending);
-
-console.log(students);
+console.log(stringsArray.filter(containsCASA));
+console.log(stringsArray.find(containsCASA));
