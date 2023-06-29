@@ -84,6 +84,7 @@ function map(array, transFunc) {
 // console.log(testArray.map(multiplyByIndex));
 // console.log(testArray.map((e, i) => e * i));
 
+// FILTER
 // function removeNegative(array) {
 //     let tempArray = [];
 
@@ -143,6 +144,7 @@ function filter(array, filterFunc) {
 // console.log(testArray3.filter(isIndexEven));
 // console.log(testArray3.filter((element, index) => index % 2 === 0));
 
+// REDUCE
 // function sumAll(array) {
 //     let accumulator = 0;
 
