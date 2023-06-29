@@ -374,41 +374,86 @@ function reduce(array, reduceFunc, startingValue) {
 
 // SORTING-------------------------------------------------------------------
 
-let numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
-const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// let numbersArray = [23, 45, 12, -8, -6, 23, 45, 1, 45, 34, 2];
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
-function compareAscendingNumbers(n1, n2) {
-    if (n1 < n2) {
-        return -1;
-    } else if (n1 > n2) {
-        return +1;
-    } else {
-        return 0;
-    }
+// function compareAscendingNumbers(n1, n2) {
+//     if (n1 < n2) {
+//         return -1;
+//     } else if (n1 > n2) {
+//         return +1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// function compareDescendingNumbers(n1, n2) {
+//     if (n1 < n2) {
+//         return +1;
+//     } else if (n1 > n2) {
+//         return -1;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// function compareAscendingNumbers2(n1, n2) {
+//     return n1 - n2;
+// }
+
+// function compareDescendingNumbers2(n1, n2) {
+//     return n2 - n1;
+// }
+
+// numbersArray.sort((n1, n2) => n1 - n2);
+
+// console.log(numbersArray);
+
+// stringsArray.sort((s1, s2) => s1.localeCompare(s2));
+
+// console.log(stringsArray);
+
+const student1 = {
+    name: 'manuela',
+    yob: 1988,
+    marks: [10, 8, 7, 5]
 }
 
-function compareDescendingNumbers(n1, n2) {
-    if (n1 < n2) {
-        return +1;
-    } else if (n1 > n2) {
-        return -1;
-    } else {
-        return 0;
-    }
+const student2 = {
+    name: 'damiano',
+    yob: 1993,
+    marks: [9, 8, 7, 10]
 }
 
-function compareAscendingNumbers2(n1, n2) {
-    return n1 - n2;
+const student3 = {
+    name: 'cesare',
+    yob: 2003,
+    marks: [7, 8, 7, 6]
 }
 
-function compareDescendingNumbers2(n1, n2) {
-    return n2 - n1;
+const student4 = {
+    name: 'isabella',
+    yob: 1996,
+    marks: [10, 8, 9, 9]
 }
 
-numbersArray.sort((n1, n2) => n1 - n2);
+const student5 = {
+    name: 'stefania',
+    yob: 1996,
+    marks: [9, 4, 7, 6]
+}
 
-console.log(numbersArray);
+const student6 = {
+    name: 'ares',
+    yob: 1993,
+    marks: [10, 10, 10, 10]
+}
 
-stringsArray.sort((s1, s2) => s1.localeCompare(s2));
+const students = [student1, student2, student3, student4, student5, student6];
 
-console.log(stringsArray);
+function compareStudentsByNameAscending(s1, s2) {
+    return s1.name.localeCompare(s2.name);
+}
+students.sort(compareStudentsByNameAscending);
+
+console.log(students);
