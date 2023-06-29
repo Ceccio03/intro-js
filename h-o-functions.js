@@ -387,6 +387,28 @@ function compareAscendingNumbers(n1, n2) {
     }
 }
 
-numbersArray.sort(compareAscendingNumbers);
+function compareDescendingNumbers(n1, n2) {
+    if (n1 < n2) {
+        return +1;
+    } else if (n1 > n2) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
+function compareAscendingNumbers2(n1, n2) {
+    return n1 - n2;
+}
+
+function compareDescendingNumbers2(n1, n2) {
+    return n2 - n1;
+}
+
+numbersArray.sort((n1, n2) => n1 - n2);
 
 console.log(numbersArray);
+
+stringsArray.sort((s1, s2) => s1.localeCompare(s2));
+
+console.log(stringsArray);
