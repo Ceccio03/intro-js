@@ -155,16 +155,16 @@ function filter(array, filterFunc) {
 // }
 // console.log(sumAll([23, 4, 4, 6, 3]));
 
-// function reduce(array, reduceFunc, startingValue) {
-//     let accumulator = startingValue;
+function reduce(array, reduceFunc, startingValue) {
+    let accumulator = startingValue;
 
-//     for (let i = 0; i < array.length; i++) {
-//         const current = array[i];
+    for (let i = 0; i < array.length; i++) {
+        const current = array[i];
         
-//         accumulator = reduceFunc(accumulator, current);
-//     }
-//     return accumulator;
-// }
+        accumulator = reduceFunc(accumulator, current);
+    }
+    return accumulator;
+}
 
 // function sum(accumulator, current) {
 //     console.log(accumulator);
@@ -352,3 +352,20 @@ function divisibleBy3(element) {
 }
 console.log(numbersArray.filter(divisibleBy3));
 console.log(numbersArray.filter(element => element > 0 && element % 3 === 0));
+
+// 10) Reduce function che dato un array di stringhe somma tutte le lunghezze
+function sumLength(acc, curr) {
+    return acc + curr.length;
+}
+console.log(stringsArray.reduce(sumLength, 0));
+console.log(stringsArray.reduce((a, c) => a + c.length, 0));
+
+// 11) Reduce function che dato un array di stringhe somma le lunghezze delle ultime 3
+function sumLengthIfLast3(acc, curr, index, originalArray) {
+    if (index >= originalArray.length - 3) {
+        return acc + curr.length;
+    }
+    return acc;
+}
+console.log(stringsArray.reduce(sumLengthIfLast3, 0));
+console.log(stringsArray.reduce((a, c, i, o) => i >= o.length - 3 ? a + c.length : a, 0));
