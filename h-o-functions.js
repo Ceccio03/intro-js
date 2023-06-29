@@ -526,3 +526,13 @@ function containsCASA(element) {
 }
 console.log(stringsArray.filter(containsCASA));
 console.log(stringsArray.find(containsCASA));
+
+// SOME----------------------------------------------------------------------
+function isGreaterThan30Chars(element) {
+    if (element.length > 30) {
+        return true;
+    }
+    return false;
+}
+console.log(stringsArray.some(isGreaterThan3Chars));
+console.log(stringsArray.some(isGreaterThan30Chars));
