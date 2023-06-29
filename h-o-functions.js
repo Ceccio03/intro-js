@@ -28,17 +28,17 @@ console.log('order');
 // }
 // console.log(divideByTwoArray([3, 7, 0]));
 
-function map(array, transFunc) {
-    let tempArray = [];
+// function map(array, transFunc) {
+//     let tempArray = [];
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        const newElement = transFunc(element);
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         const newElement = transFunc(element);
         
-        tempArray.push(newElement);
-    }
-    return tempArray;
-}
+//         tempArray.push(newElement);
+//     }
+//     return tempArray;
+// }
 
 // function addOne(element) {
 //     const newElement = element + 1;
@@ -99,18 +99,18 @@ function map(array, transFunc) {
 // }
 // console.log(removeNegative([0, 3, 5, -2, -5, 8]));
 
-function filter(array, filterFunc) {
-    let tempArray = [];
+// function filter(array, filterFunc) {
+//     let tempArray = [];
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
         
-        if (filterFunc(element)) {
-            tempArray.push(element);
-        }
-    }
-    return tempArray;
-}
+//         if (filterFunc(element)) {
+//             tempArray.push(element);
+//         }
+//     }
+//     return tempArray;
+// }
 
 // function isPositive(element) {
 //     if (element >= 0) {
@@ -157,16 +157,16 @@ function filter(array, filterFunc) {
 // }
 // console.log(sumAll([23, 4, 4, 6, 3]));
 
-function reduce(array, reduceFunc, startingValue) {
-    let accumulator = startingValue;
+// function reduce(array, reduceFunc, startingValue) {
+//     let accumulator = startingValue;
 
-    for (let i = 0; i < array.length; i++) {
-        const current = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const current = array[i];
         
-        accumulator = reduceFunc(accumulator, current);
-    }
-    return accumulator;
-}
+//         accumulator = reduceFunc(accumulator, current);
+//     }
+//     return accumulator;
+// }
 
 // function sum(accumulator, current) {
 //     console.log(accumulator);
@@ -507,32 +507,67 @@ function reduce(array, reduceFunc, startingValue) {
 // console.log(students);
 
 // FIND-------------------------------------------------------------------
-const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
+// const stringsArray = ['23', 'PIPPO', 'pluto', 'la CASA blu', 'Osvaldo', '', 'porchetta'];
 
-function isGreaterThan3Chars(element) {
-    if (element.length > 3) {
-        return true;
-    }
-    return false;
-}
-console.log(stringsArray.filter(isGreaterThan3Chars));
-console.log(stringsArray.find(isGreaterThan3Chars));
+// function isGreaterThan3Chars(element) {
+//     if (element.length > 3) {
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(stringsArray.filter(isGreaterThan3Chars));
+// console.log(stringsArray.find(isGreaterThan3Chars));
 
-function containsCASA(element) {
-    if (element.includes('CASA')) {
-        return true;
-    }
-    return false;
-}
-console.log(stringsArray.filter(containsCASA));
-console.log(stringsArray.find(containsCASA));
+// function containsCASA(element) {
+//     if (element.includes('CASA')) {
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(stringsArray.filter(containsCASA));
+// console.log(stringsArray.find(containsCASA));
 
 // SOME----------------------------------------------------------------------
-function isGreaterThan30Chars(element) {
-    if (element.length > 30) {
-        return true;
+// function isGreaterThan30Chars(element) {
+//     if (element.length > 30) {
+//         return true;
+//     }
+//     return false;
+// }
+// console.log(stringsArray.some(isGreaterThan3Chars));
+// console.log(stringsArray.some(isGreaterThan30Chars));
+
+// function accum(s) {
+//   let accumulator = "";
+
+//   for (let i = 0; i < s.length; i++) {
+//     const element = s[i];
+//     for (let j = 0; j < i +1; j++) {
+//       if (j === 0) {
+//         accumulator = accumulator + element.toUpperCase()
+        
+//       } else {
+//         accumulator = accumulator + element.toLowerCase() 
+        
+//       }
+//     }
+//     if (i < s.length - 1) {
+//         accumulator += '-'  
+//     }
+//   }
+//   return accumulator 
+// }
+
+// console.log(accum("manuelaAriotti"));
+
+
+function powSequence(numbers) {
+    let result = 0;
+
+    for (number of numbers) {
+       let square = number * number;
+       result += square;
     }
-    return false;
+    return result
 }
-console.log(stringsArray.some(isGreaterThan3Chars));
-console.log(stringsArray.some(isGreaterThan30Chars));
+console.log(powSequence([1,2,2]));
