@@ -1,50 +1,75 @@
 // TYPEOF
-const pippo = 12;
-const pluto = 'ciao mondo';
-const paperino = true;
-const qui = undefined;
-const quo = null;
-const qua = NaN;
-const clarabella = {
-    name: 'isabella',
-    yob: 1996
-};
-const orazio = ['ciao', 'hello'];
+// const pippo = 12;
+// const pluto = 'ciao mondo';
+// const paperino = true;
+// const qui = undefined;
+// const quo = null;
+// const qua = NaN;
+// const clarabella = {
+//     name: 'isabella',
+//     yob: 1996
+// };
+// const orazio = ['ciao', 'hello'];
 
-console.log(typeof pippo);
-console.log(typeof pluto);
-console.log(typeof paperino);
-console.log(typeof qui);
-console.log(typeof quo);
-console.log(typeof qua);
-console.log(qua === NaN);
-console.log(isNaN(qua));
-console.log(typeof clarabella);
-console.log(typeof orazio);
+// console.log(typeof pippo);
+// console.log(typeof pluto);
+// console.log(typeof paperino);
+// console.log(typeof qui);
+// console.log(typeof quo);
+// console.log(typeof qua);
+// console.log(qua === NaN);
+// console.log(isNaN(qua));
+// console.log(typeof clarabella);
+// console.log(typeof orazio);
 
-function range(start, end, step = 1, reversed = false) {
+// function range(start, end, step = 1, reversed = false) {
+//     const tempArray = [];
+
+//     if (reversed) {
+    
+//         if (start < end) {
+//             return tempArray;
+//         }
+
+//         for (let i = start; i >= end; i -= step) {
+//             tempArray.push(i);
+//         }
+//         return tempArray;
+//     } else {
+//         if (end < start) {
+//             return tempArray;
+//         }
+//         for (let i = start; i <= end; i += step) {
+//             tempArray.push(i);
+//         }
+//     }
+//     return tempArray;
+// }
+// console.log(range(-5, 50));
+// console.log(range(0, 100, 2));
+// console.log(range(-5, 50));
+
+// function sum(numbers) {
+//     return numbers.reduce((acc, curr) => acc + curr, 0);
+// }
+// console.log(sum(range(0, 10)));
+
+const testArray = ['qui', 'quo', 'qua'];
+
+function reverseArray(arr) {
     const tempArray = [];
 
-    if (reversed) {
-    
-        if (start < end) {
-            return tempArray;
-        }
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const element = arr[i];
 
-        for (let i = start; i >= end; i -= step) {
-            tempArray.push(i);
-        }
-        return tempArray;
-    } else {
-        if (end < start) {
-            return tempArray;
-        }
-        for (let i = start; i <= end; i += step) {
-            tempArray.push(i);
-        }
+        tempArray.push(element);
     }
     return tempArray;
 }
-console.log(range(-5, 50));
-console.log(range(0, 100, 2));
-console.log(range(-5, 50));
+
+const newArray = reverseArray(testArray);
+console.log(newArray);
+
+function reverseArrayInPlace(arr) {
+    
+}
