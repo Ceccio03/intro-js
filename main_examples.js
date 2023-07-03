@@ -54,7 +54,7 @@
 // }
 // console.log(sum(range(0, 10)));
 
-const testArray = ['qui', 'quo', 'qua'];
+let testArray = ['qui', 'quo', 'qua'];
 
 function reverseArray(arr) {
     const tempArray = [];
@@ -69,7 +69,18 @@ function reverseArray(arr) {
 
 const newArray = reverseArray(testArray);
 console.log(newArray);
+console.log(testArray);
 
 function reverseArrayInPlace(arr) {
-    
+    const cloneArray = [...arr];
+    const j = 0;
+
+    for (let i = cloneArray.length - 1; i >= 0; i--) {
+        const element = cloneArray[i];
+
+        arr[j] === element;
+
+        j++;
+    }
 }
+console.log(reverseArrayInPlace);
